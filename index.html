@@ -1,11 +1,19 @@
 <html>
-<head>
-<script>
-if (window.location.href==="https://kevinstory.github.io/randcom_qr_code_arc/") {
-    window.location.href = "https://google.com"; 
-}
-</script>
-</head>
-<body>
-</body>
+  <head>
+    <script>
+      var urls = [
+        "https://google.com",
+        "https://bing.com",
+        "https://yourjs.dev",
+      ];
+      function getRandomUrl(max) {
+        max = Math.floor(max);
+        return Math.floor(Math.random() * max);
+      }
+      index = getRandomUrl(urls.length);
+      console.log(index);
+      window.location.href = urls[index];
+    </script>
+  </head>
+  <body></body>
 </html>
